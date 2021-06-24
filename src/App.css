@@ -1,0 +1,28 @@
+.app {
+  border: 2px solid red;
+  border-radius: 10px;
+  background-color: gray;
+  width: 800px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.btn-left {
+  left: -200px;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: powderblue;
+  position: absolute;
+}
