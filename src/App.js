@@ -19,46 +19,40 @@ function App() {
   });
   return (
     <div className="app">
-      <div id="hello">
-        <button
-          onClick={() => {
-            if (curIdx === 0) setIdx(2);
-            else setIdx((curIdx - 1) % 3);
-            setDir("right");
-          }}
-        >
-          헬 로
-        </button>
+      <div
+        className="btn left"
+        onClick={() => {
+          if (curIdx === 0) setIdx(2);
+          else setIdx(curIdx - 1);
+          setDir("right");
+        }}
+      >
+        {"<"}
       </div>
       {curDir === "left"
         ? transitions((style, i) => {
             return (
-              <animated.div
-                className="box"
-                style={style}
-                onClick={() => {
-                  setIdx((curIdx + 1) % 3);
-                  setDir("left");
-                }}
-              >
+              <animated.div className="box" style={style}>
                 {data[i].title}
               </animated.div>
             );
           })
         : transRight((style, i) => {
             return (
-              <animated.div
-                className="box"
-                style={style}
-                onClick={() => {
-                  setIdx((curIdx + 1) % 3);
-                  setDir("left");
-                }}
-              >
+              <animated.div className="box" style={style}>
                 {data[i].title}
               </animated.div>
             );
           })}
+      <div
+        className="btn right"
+        onClick={() => {
+          setIdx((curIdx + 1) % 3);
+          setDir("left");
+        }}
+      >
+        {">"}
+      </div>
     </div>
   );
 }
