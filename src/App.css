@@ -9,9 +9,6 @@
   justify-content: center;
   position: relative;
 }
-.btn-left {
-  left: -200px;
-}
 .box {
   width: 100px;
   height: 100px;
@@ -25,4 +22,8 @@
   font-size: 20px;
   background-color: powderblue;
   position: absolute;
+}
+#hello {
+  position: absolute;
+  left: 0;
 }
